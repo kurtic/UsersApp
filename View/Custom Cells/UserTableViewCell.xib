@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" restorationIdentifier="UserTableViewCell" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="UserTableViewCell" rowHeight="96" id="KGk-i7-Jjw" customClass="UserTableViewCell" customModule="UsersApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="293" height="70"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BcZ-V8-kff">
+                        <rect key="frame" x="5" y="5" width="60" height="60"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="60" id="6YL-dG-nhF"/>
+                            <constraint firstAttribute="width" constant="60" id="dc8-5n-U7o"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="30"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dVJ-h2-ihG">
+                        <rect key="frame" x="73" y="5" width="215" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3aY-xr-JNj">
+                        <rect key="frame" x="77" y="34" width="211" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" systemColor="opaqueSeparatorColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <gestureRecognizers/>
+                <constraints>
+                    <constraint firstItem="3aY-xr-JNj" firstAttribute="top" secondItem="dVJ-h2-ihG" secondAttribute="bottom" constant="8" symbolic="YES" id="75I-VY-nXl"/>
+                    <constraint firstAttribute="bottom" secondItem="BcZ-V8-kff" secondAttribute="bottom" constant="5" id="8XG-zc-Sep"/>
+                    <constraint firstItem="3aY-xr-JNj" firstAttribute="leading" secondItem="BcZ-V8-kff" secondAttribute="trailing" constant="12" id="JQ1-Cv-Gr7"/>
+                    <constraint firstAttribute="trailing" secondItem="dVJ-h2-ihG" secondAttribute="trailing" constant="5" id="j7c-EQ-vdT"/>
+                    <constraint firstItem="3aY-xr-JNj" firstAttribute="trailing" secondItem="dVJ-h2-ihG" secondAttribute="trailing" id="lNe-kE-M8N"/>
+                    <constraint firstItem="BcZ-V8-kff" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="nVg-Ue-kV2"/>
+                    <constraint firstItem="BcZ-V8-kff" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="oAk-Mf-8iE"/>
+                    <constraint firstItem="dVJ-h2-ihG" firstAttribute="leading" secondItem="BcZ-V8-kff" secondAttribute="trailing" constant="8" symbolic="YES" id="qne-K1-5h1"/>
+                    <constraint firstItem="dVJ-h2-ihG" firstAttribute="top" secondItem="BcZ-V8-kff" secondAttribute="top" id="ygr-jC-COY"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <accessibility key="accessibilityConfiguration">
+                <bool key="isElement" value="YES"/>
+            </accessibility>
+            <gestureRecognizers/>
+            <connections>
+                <outlet property="userImage" destination="BcZ-V8-kff" id="QOa-Pj-R38"/>
+                <outlet property="userSubtitle" destination="3aY-xr-JNj" id="gql-wm-VHq"/>
+                <outlet property="userTitle" destination="dVJ-h2-ihG" id="xYC-Jd-9ZQ"/>
+            </connections>
+            <point key="canvasLocation" x="131.8840579710145" y="82.366071428571431"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
